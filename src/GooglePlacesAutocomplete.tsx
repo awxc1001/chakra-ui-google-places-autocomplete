@@ -8,7 +8,6 @@ import GooglePlacesAutocompleteProps, {
 } from './GooglePlacesAutocomplete.types';
 import autocompletionRequestBuilder from './helpers/autocompletionRequestBuilder';
 import { Loader } from '@googlemaps/js-api-loader';
-import { Options } from 'react-select';
 
 const GooglePlacesAutocomplete: React.ForwardRefRenderFunction<
   GooglePlacesAutocompleteHandle,
@@ -29,7 +28,7 @@ const GooglePlacesAutocomplete: React.ForwardRefRenderFunction<
   const [placesService, setPlacesService] = useState<google.maps.places.AutocompleteService | undefined>(undefined);
   const [sessionToken, setSessionToken] = useState<google.maps.places.AutocompleteSessionToken | undefined>(undefined);
   const fetchSuggestions = useDebouncedCallback(
-    (value: string, cb: (options: Options<GooglePlacesAutocompleteOption>) => void): void => {
+    (value: string, cb: (options: GooglePlacesAutocompleteOption[]) => void): void => {
       if (!placesService) return cb([]);
       if (value.length < minLengthAutocomplete) return cb([]);
 

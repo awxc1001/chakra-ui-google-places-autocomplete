@@ -1,5 +1,5 @@
 import { LoaderOptions } from '@googlemaps/js-api-loader';
-import { Props } from 'react-select';
+import { AsyncProps, GroupBase } from 'chakra-react-select';
 
 export type GooglePlacesAutocompleteOption = {
   label: string;
@@ -32,6 +32,6 @@ export default interface GooglePlacesAutocompleteProps {
   debounce?: number;
   minLengthAutocomplete?: number;
   onLoadFailed?: (error: Error) => void;
-  selectProps?: Props<GooglePlacesAutocompleteOption, false>;
+  selectProps?: AsyncProps<GooglePlacesAutocompleteOption, false, GroupBase<GooglePlacesAutocompleteOption>>;
   withSessionToken?: boolean;
 }
