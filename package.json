@@ -1,6 +1,6 @@
 {
   "name": "chakra-ui-google-places-autocomplete",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Chakra UI - Google places autocomplete input for ReactJS.",
   "main": "build/index.js",
   "module": "build/index.es.js",
