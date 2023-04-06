@@ -1,5 +1,5 @@
-const fs = require('fs');
-const pkg = require('../package.json');
+import fs from 'fs';
+import pkg from '../package.json' assert { type: 'json' };
 
 (async () => {
   fs.copyFileSync('LICENSE', './build/LICENSE');
